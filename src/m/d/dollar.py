@@ -12,16 +12,16 @@ from src.utils import common as utils
 
 ### $piece ###
 
-def p(string, delimiter, index):
+def d_p(string, delimiter = "", index = 1):
     return __d_piece(string, delimiter, index)
-def P(string, delimiter, index):
+def d_P(string, delimiter = "", index = 1):
     return __d_piece(string, delimiter, index)
-def piece(string, delimiter, index):
+def d_piece(string, delimiter = "", index = 1):
     return __d_piece(string, delimiter, index)
-def PIECE(string, delimiter, index):
+def d_PIECE(string, delimiter = "", index = 1):
     return __d_piece(string, delimiter, index)
 
-def __d_piece(string, delimiter, index):
+def __d_piece(string, delimiter = "", index = 1):
     '''
     Pulls a piece from a string at a provided index based on the input delimiter.
 
@@ -41,6 +41,7 @@ def __d_piece(string, delimiter, index):
         # TODO: tbh I don't know what M does here lmao, just $e?
         return ""
 
+    # TODO: may only need to cover "" case here
     if (utils.isNoneOrEmptyStr(index)):
         index = 1
     
